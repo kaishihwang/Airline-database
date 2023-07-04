@@ -1,5 +1,5 @@
-# Sleep Efficiency Dataset
-## Basic Software Tools for Data Analysis STA 9750
+# Association Analysis and Regression Model
+## with Sleep Efficiency Dataset
 
 ### Introduction
 Sleep is one of the crucial factors for maintaining health and well-being. By measuring sleep efficiency, we can understand how various components of a person’s lifestyle are affected or affecting that person’s sleep. Approximately one-third of adults in the United States reported they are not receiving enough sleep or rest each night, according to the National Heart, Lung, and Blood Institute. 
