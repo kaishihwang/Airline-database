@@ -80,8 +80,8 @@ For the outcome, the most critical predictor variable for predicting sleep quali
 
 Among sleepers with 1.5 or fewer awakenings per night, age is the next most important predictor variable. Sleepers who are 41.5 years old and below tend to have good sleep, otherwise, sleepers who consumes less than 0.5 alcohol are likely to have excellent sleep. 
 
-Among patients who have more than 1.5 awakenings per night, the next most important predictor variable is alcohol consumption.  Sleepers who consume less than 0.5 alcohol tend to have a fair sleep quality, otherwise if they are younger than 42.5 years old and sleep less than 7.75 hours  is likely to have poor sleep.
+Among patients with more than 1.5 awakenings per night, the next most important predictor variable is alcohol consumption.  Sleepers who consume less than 0.5 alcohol tend to have a fair sleep quality, otherwise, if they are younger than 42.5 years old and sleep less than 7.75 hours  is likely to have poor sleep.
 
 The other predictor variables (Caffeine.consumption, Alcohol.consumption, Smoking.status.binary, and Exercise.frequency) do not contribute significantly to predicting sleep quality in this model.
 
-![image](https://github.com/kaishihwang/Sleep-Efficiency-Dataset/assets/131721638/c6e38ed9-e841-4e44-b8d8-885a0798836a)
+![Picture20](https://github.com/kaishihwang/Sleep-Efficiency-Dataset/assets/131721638/8b1d1c2d-d3d8-4df1-b6fd-c59f04173b5c)
