@@ -85,3 +85,11 @@ Among patients with more than 1.5 awakenings per night, the next most important 
 The other predictor variables (Caffeine.consumption, Alcohol.consumption, Smoking.status.binary, and Exercise.frequency) do not contribute significantly to predicting sleep quality in this model.
 
 ![Picture20](https://github.com/kaishihwang/Sleep-Efficiency-Dataset/assets/131721638/8b1d1c2d-d3d8-4df1-b6fd-c59f04173b5c)
+
+### Authors
+Kai-Shih Wang 
+Kaung Mon Htet
+Yoon Young Kim
+Khine Hsu Wai
+Thy Bui
+![image](https://github.com/ks-wang/association-analysis-and-regression-model/assets/131721638/f2df8edd-e5bc-4e33-b96f-2d5b5c7a6aaf)
