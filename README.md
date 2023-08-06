@@ -87,8 +87,8 @@ The other predictor variables (Caffeine.consumption, Alcohol.consumption, Smokin
 ![Picture20](https://github.com/kaishihwang/Sleep-Efficiency-Dataset/assets/131721638/8b1d1c2d-d3d8-4df1-b6fd-c59f04173b5c)
 
 ## Authors
-Kai Shih Wang 
-Kaung Mon Htet
-Yoon Young Kim
-Khine Hsu Wai
+Kai Shih Wang, 
+Kaung Mon Htet,
+Yoon Young Kim,
+Khine Hsu Wai,
 Thy Bui
