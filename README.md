@@ -1,7 +1,6 @@
-# Association Analysis and Regression Model
-## with Sleep Efficiency Dataset
+# Association Analysis and Regression Model with Sleep Efficiency Dataset
 
-### Introduction
+## Introduction
 Sleep is one of the crucial factors for maintaining health and well-being. By measuring sleep efficiency, we can understand how various components of a person’s lifestyle are affected or affect that person’s sleep. Approximately one-third of adults in the United States reported they are not receiving enough sleep or rest each night, according to the National Heart, Lung, and Blood Institute. 
 
 While choosing datasets, our team found that each of us has very different sleep schedules and was very interested in how and why we could have such different sleeping routines when all of our lifestyles and habits are similar. Thus, we have found the sleep efficiency topic to be the most interesting one of all. Not only is sleep efficiency associated with all of us, but it is also the puppet master behind our decisions and choices.  Moreover, researchers can refer to this analysis to study further research leading to mental and physical illness, health, and treatments for sleep-related disorders. Due to these reasons, we have decided to use sleep efficiency data for our research purpose.
@@ -18,13 +17,12 @@ Among these 15 variables, Gender and Smoking Status are the only two categorizab
 
 We have 452 samples in our dataset. 
 
-### Data Cleaning
+## Data Cleaning
 Before we start with our analysis of our research, we must do data cleaning. Data cleaning is an essential part of any research. It helps the researchers understand the data more. We started by looking at our dataset and finding any nulls and N/As in the dataset. We found missing data in the Awakening column in 20 missing samples, Caffeine consumption in 25 samples, Alcohol consumption in 14 samples, and Exercise frequency in 6 samples. Since we only have 452 samples, we concluded that dropping missing data would not be the best option to result in a reliable analysis. Instead, we cleaned our missing null data by finding the median for the quantitative variables and imputing those null values with our median values.
 
 For the column with categorical values, for instance, the smoking status column, we converted the Yes and No values to 1 and 0 (i.e., yes for smokers and 0 for non-smokers). Lastly, as using different age brackets for survey data can also offer a deeper analysis of the research and help us understand how each age group’s lifestyle habits could affect sleep efficiency, we created an age group column and split ages into each relevant age group by using FOR Loop and IF Else command. For example, the age between 20 to 29 goes into the 20s age bucket. By doing so, we have created 6 different age buckets based on the youngest sample age of 9 and the oldest sample age of 69 (i.e., Under 19, 20s, 30s, 40s, 50s, and 60s).
 
-### Association Analysis
-
+## Association Analysis
 Following the thorough data cleaning process, our team made the decision to designate sleep efficiency as our dependent variable.  To check whether there is any relationship between the test subjects’ Gender and Age and Sleep efficiency, we drew a scatter plot. However, the points appear randomly scattered, and we were not able to find any meaningful patterns or associations between our dependent variable and the test subjects’ Gender and Age. 
 
 <img width="281" alt="Picture1" src="https://github.com/kaishihwang/Sleep-Efficiency-Dataset/assets/131721638/4a888739-bf87-478e-ada3-89fc9442acb5">
@@ -51,7 +49,7 @@ In contrast, we analyzed the three variables that demonstrated the strongest neg
 
 We also applied logarithm transformations to the above variables to attempt to linearize the relationships. However, the plots still showed non-linear relationships. We concluded that a logarithm transformation does not guarantee linearity. Other factors, such as additional influencing variables or heteroscedasticity, may contribute to the non-linear and non-monotonic appearance. Exploring other transformations (such as converting sleep efficiency into different group levels) might be necessary, or considering other modeling techniques to capture more complex relationships.
 
-### Regression Model
+## Regression Model
 Since Deep Sleep Percentage and Light Sleep Percentage were our strongest variables, we further compared these variables with our dependent variable, Sleep Efficiency, in the linear regression model to see if they were significant. 
 
 ![Picture17](https://github.com/kaishihwang/Sleep-Efficiency-Dataset/assets/131721638/9366d4fc-9383-4f2d-a2b1-cca1b31507ec)
@@ -62,16 +60,14 @@ Observing the figure above, in the linear regression between sleep efficiency an
 
 In contrast to deep sleep percentage, we can observe in the regression table that the relationship between light sleep percentage and sleep efficiency is negative. The coefficient of the regression is at -0.0072345, suggesting that with every one-unit increase in light sleep percentage, the sleep efficiency decreases at that coefficient. However, the intercept starts at positive, at 0.9666, when the sleep percentage is at 0. The R squared is at 0.6704, suggesting a moderately strong relationship between the variables. Finally, the p-value is at the same value as the deep sleep percentage, which is less than 2.2e-16 suggesting the statistical significance between the two variables, light sleep percentage and sleep efficiency. As we move on to observe the plot, we notice a similar pattern with the deep sleep percentage plot where there are missing values in the middle, with the big jump at 0.7%. However, we can still conclude that although there might be no linearity, there is still a correlation between the variables, as when light sleep percentage increases, we can observe a decrease in the values of sleep efficiency. To make both plots more viable, we would need a bigger sample size in the testing data. 
 
-### Other Techniques
-### Multiple Linear Regression 
-
+## Multiple Linear Regression 
 ![Picture19](https://github.com/kaishihwang/Sleep-Efficiency-Dataset/assets/131721638/291a3351-3234-4d36-8cec-55257b5c778f)
 
 Next, we did multiple linear regression with all the variables in the data to further analyze which variables were significant to our dependent variable. We excluded the light sleep percentage variable this time as we deduced that it depended heavily on deep sleep percentage when we performed linear regression. In the regression table, we can observe that the variables, Age, REM Sleep Percentage, Deep Sleep Percentage, Awakenings, Alcohol Consumption, Smoking Status, and Exercise Frequency, were all statistically significant due to all of their p-values being less than 0.05 significant level. With RSE at 0.06 and R squared at 0.8003, we can conclude that these variables were all affecting our dependent variable, sleep efficiency. Although we initially believed that sleep duration and caffeine consumption were the deciding variables, it was shocking for our group to analyze that they were insignificant in determining sleep efficiency. Decision tree analysis
 We decided to choose decision tree analysis next; our purpose is to identify the most important predictors of sleep quality and how they interact with each other to develop a predictive model that can help better understand better and improve sleep quality in the future. By using a decision tree, we can visualize the relationships between different variables and how they contribute to predicting sleep quality and identify the most important factors that influence sleep health.
 In this analysis, we used the tree() function in R to build a classification tree that predicts sleep quality based on a set of predictor variables. The predictor variables included in the analysis were Age, Sleep.duration, Awakenings, Caffeine.consumption, Alcohol.consumption, Smoking.status, and Exercise.frequency. Before we proceed with the analysis, we transform quantitative data sleep.quality into 4 categorical data: “Excellent: 90-100, Good: 80-89, Fair: 60-79, Poor: Below 60.
 
-### Decision tree analysis
+## Decision tree analysis
 We decided to choose decision tree analysis next; our purpose is to identify the most important predictors of sleep quality and how they interact with each other to develop a predictive model that can help better understand better and improve sleep quality in the future. By using a decision tree, we can visualize the relationships between different variables and how they contribute to predicting sleep quality and identify the most important factors that influence sleep health.
 
 In this analysis, we used the tree() function in R to build a classification tree that predicts sleep quality based on a set of predictor variables. The predictor variables included in the analysis were Age, Sleep.duration, Awakenings, Caffeine.consumption, Alcohol.consumption, Smoking.status, and Exercise.frequency. Before we proceed with the analysis, we transform quantitative data on sleep.quality into 4 categorical data: “Excellent: 90-100, Good: 80-89, Fair: 60-79, Poor: Below 60.
